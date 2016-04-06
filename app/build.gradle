@@ -4,7 +4,7 @@ apply plugin: 'maven-publish'
 
 def packageName = 'com.testdroid.calclib'
 def libraryVersion = '1.0.1'
-def projectName = 'TestArtifactory'//project.getName()
+def projectName = project.getName() /*'TestArtifactory'*///
 
 
 android {
@@ -45,7 +45,9 @@ publishing {
     }
 }
 artifactory {
-    contextUrl = 'http://localhost:8081/artifactory'
+    //url 'http://testwar.herokuapp.com/plugins-release'
+//    contextUrl = 'http://localhost:8081/artifactory'
+    contextUrl = "$artifactory_contextUrl" //'http://testwar.herokuapp.com'
     publish {
         repository {
             // The Artifactory repository key to publish to
