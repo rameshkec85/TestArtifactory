@@ -3,7 +3,7 @@ apply plugin: 'com.jfrog.artifactory'
 apply plugin: 'maven-publish'
 
 def packageName = 'com.testdroid.calclib'
-def libraryVersion = '1.0.1'
+def libraryVersion = '1.0.2'
 def projectName = project.getName() /*'TestArtifactory'*///
 
 
